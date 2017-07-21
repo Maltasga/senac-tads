@@ -1,0 +1,5 @@
+Deve criar o banco de dados na primeira vez que executar a aplicação na máquina (servidor).
+
+A aplicação está configurada para tabalhar com um database chamado 'lojadb', com usuario 'loja' e senha 'loja'
+
+Caso queira criar um database com configurações diferentes de acesso será necessário realizar a configuração na classe br.senac.sp.whiletrue.dao.util.DbConstants

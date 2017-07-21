@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <title>Páscoa Espetacular</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <h1>Páscoa Espetacular</h1>
+    <form action="destino.html">
+        <div class="linha">
+            <div class="campo">
+                <label for="nome">
+                    Nome
+                </label>
+                <input type="text" name="nome" required />
+            </div>
+            <div class="campo">
+                <label for="sobrenome">
+                    Sobrenome
+                </label>
+                <input type="text" name="sobrenome" required />
+            </div>
+        </div>
+        <div class="linha">
+            <div class="campo">
+                <label for="nascimento">
+                    Data de Nascimento
+                </label>
+                <input type="date" name="nascimento" required />
+            </div>
+            <div class="campo">
+                <label for="sexo">
+                    Sexo
+                </label>
+                <select name="sexo" required>
+                    <option value=""></option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Masculino">Masculino</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="linha">
+            <div class="campo">
+                <label for="loja">
+                    Loja
+                </label>
+                <select name="loja" required>
+                    <option value=""></option>
+                    <option value="Matriz">Matriz</option>
+                    <option value="Loja Centro">Loja Centro</option>
+                    <option value="Loja Shopping XPTO">Loja Shopping XPTO</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label for="nf">
+                    Nota Fiscal
+                </label>
+                <input type="text" name="nf" required />
+            </div>
+        </div>
+        <div class="linha">
+            <div class="campo">
+                <label for="data">
+                    Data da compra
+                </label>
+                <input type="date" name="data" required />
+            </div>
+            <div class="campo">
+                <label for="total">
+                    Valor da Compra
+                </label>
+                <input type="text" name="total" required>
+            </div>
+        </div>
+        <div class="linha">
+            <div class="campo">
+                <label for="itens">Itens</label>
+                <input type="text" name="itens" required />
+                <input type="text" name="itens" required />
+                <input type="text" name="itens" required />
+            </div>
+        </div>
+        <div class="linha">
+            <div class="campo">
+                <label for="resposta">
+                    Resposta
+                </label>
+                <textarea cols="70" rows="4" name="resposta" required></textarea>
+            </div>
+        </div>
+        <div class="linha">
+            <div class="campo">
+                <label>Prêmios</label>
+                <input type="text" class="premio" name="premios[0]" value="Viagem para Ilha de Pascoa" readonly>
+                <input type="text" class="premio" name="premios[1]" value="Coelho inflavel BunnysZord tamanho real" readonly>
+                <input type="text" class="premio" name="premios[2]" value="Sal de fruta Especial de Pascoa" readonly>
+            </div>
+        </div>
+        <div>
+            <div>
+                <input type="hidden" name="brinde" value="Chocolate Amargo 200 porcento cacau" />
+            </div>
+        </div>
+        <input type="hidden" name="id" value="487312678">
+
+        <div class="linha">
+            <div class="campo btn-enviar">
+                <input type="submit" value="Enviar" />
+            </div>
+        </div>
+    </form>
+    <script src="programa.js"></script>
+</body>
+
+</html>
+
+
+<!--
+nome=Daniel
+sobrenome=Savoy
+nascimento=1980-12-12
+nf=213774893
+items=Coelho+de+Chocolate+500g
+items=Meias+Cinza+42
+items=Bicicleta+36+Marchas
+data=2017-03-20
+sexo=Masculino
+total=567.43
+loja=Casas+Alagoas
+resposta=O+melhor+chocolate+que+eu+costumo+comprar+eh+o+UberCacauSuperLeitePlus
+premios[2]=Viagem+para+Ilha+de+Pascoa
+premios[1]=Coelho+inflavel+BunnysZord+tamanho+real
+premios[3]=Sal+de+fruta+Especial+de+Pascoa
+brinde=Chocolate+Amargo+200+porcento+cacau
+id=487312678-->

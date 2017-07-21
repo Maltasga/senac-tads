@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desisto</title>
+    <link href="https://fonts.googleapis.com/css?family=Griffy" rel="stylesheet">
+    <link rel="stylesheet" href="estilo-geral.css">
+</head>
+
+<body>
+    <div class="titulo">
+        <div>Meus 20 filmes... e DESISTO!</div>
+    </div>
+    <div class="categorias">
+        <span class="categoria aventura" onclick="toggleFiltroCategoria(this, 'aventura');">Aventura</span>
+        <span class="categoria scifi" onclick="toggleFiltroCategoria(this, 'scifi');">Sci-Fi</span>
+        <span class="categoria comedia" onclick="toggleFiltroCategoria(this, 'comedia');">Comédia</span>
+        <span class="categoria romance" onclick="toggleFiltroCategoria(this, 'romance');">Romance</span>
+        <span class="categoria drama" onclick="toggleFiltroCategoria(this, 'drama');">Drama</span>
+    </div>
+    <div class="clear"></div>
+    <div class="container"></div>
+    <script src="filmes.js"></script>
+    <script src="programa.js"></script>
+</body>
+
+</html>

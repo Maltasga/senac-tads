@@ -1,0 +1,32 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%
+}
+
+body {
+    background: hsl(0,100%,50%);
+}
+
+body.ligado {
+    background: hsl(0,100%,100%);    
+}
+
+div {
+    background: hsl(0,0%,100%);
+    width: 100%;
+    height: 50%;
+}
+
+body.ligado div{
+    background: hsl(0,100%,50%);
+    border-radius: 50%;
+    position: fixed;
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+}

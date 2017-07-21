@@ -1,0 +1,24 @@
+.container-pdv {
+    width: 920px;
+    border: 1px #777 solid;
+    background: #F8F8FF;
+    box-sizing: border-box;
+    margin: auto;
+    position: fixed;
+    left: 35px;
+    top: 25px;
+    border-radius: 30px;
+    opacity: 0.9;
+}
+.container-pdv .header {
+    padding: 20px;
+    font-size: 25px;
+}
+.header p:nth-of-type(2) {
+    font-size: 20px;
+    margin: auto 30px;
+}
+
+.container-pdv .corpo {
+    padding: 20px;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <title> Aula 05 - Formulários</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <div class="shirt-box">
+        <p class="header">Personalize sua <span>camiseta</span>! :)</p>
+        <form action="destino.html" method="GET">
+            <div class="linha">
+                <label>Sexo</label>
+                <div class="field">
+                    <input type="radio" value="M" name="sexo" id="masc" required>
+                    <label for="masc">Masculino</label>
+                    <input type="radio" value="F" name="sexo" id="fem" required>
+                    <label for="fem">Feminino</label>
+                </div>
+            </div>
+            <div class="linha">
+                <label>Tamanho</label>
+                <div class="field">
+                    <select name="tamanho" required>
+                    <option value=""></option>
+                    <option value="P">Pequeno</option>
+                    <option value="M">Médio</option>
+                    <option value="G">Grande</option>
+                </select>
+                </div>
+            </div>
+            <div class="linha">
+                <label>Cor</label>
+                <div class="field">
+                    <input type="color" name="cor" id="cor" required>
+                </div>
+            </div>
+            <div class="linha">
+                <label>Texto</label>
+                <div class="field">
+                    <input type="text" name="texto" required>
+                </div>
+            </div>
+            <div class="linha">
+                <label>&nbsp;</label>
+                <div class="field">
+                    <input type="checkbox" name="presente" id="presente" />
+                </div>
+                <label for="presente">Para presente?</label>
+            </div>
+            <hr />
+            <p class="header">Dados para entrega</p>
+            <div class="linha">
+                <label>
+                    Endereço
+                </label>
+                <div class="field">
+                    <input type="text" name="endereco" required>
+                </div>
+            </div>
+            <div class="linha">
+                <label>
+                    Melhor data
+                </label>
+                <div class="field">
+                    <input type="date" required>
+                </div>
+            </div>
+
+            <div class="linha">
+                <button type="submit" class="btn-enviar">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <script src="programa.js"></script>
+</body>
+
+</html>

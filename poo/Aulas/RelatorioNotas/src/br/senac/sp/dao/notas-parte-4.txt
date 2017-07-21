@@ -1,0 +1,13 @@
+M	paulo	6
+G	paula	7
+M	joao	7
+G	joana	5
+M	maria	8
+G	mario	4
+G	ronaldo	5
+M	roberta	9
+M	cesar	4
+G	julia	8
+G	gilson	6
+M	gisele	6
+G	pedro	5

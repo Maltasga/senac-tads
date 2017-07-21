@@ -1,0 +1,41 @@
+.container {
+    width: 80%;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+}
+.campo {
+    padding: 5px;
+    border:none;
+    border-bottom: 1px gray dotted;
+    margin: auto 5px;
+}
+.label {
+    display: inline-block;
+    font-weight: bold;
+}
+.btn-submit {
+    border-radius: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: hsla(240,100%,50%,.5);
+    border: none;
+    color: #FFF;
+    font-weight: bold;
+    cursor: pointer;
+}
+.chat {
+    padding: 20px;
+    border: 1px gray solid;
+    margin: 15px auto;
+    height: 200px;
+    overflow: auto;
+}
+
+.chat .linha-mensagem {
+    text-align: left;
+}

@@ -1,0 +1,52 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+div.superior {
+    background: hsla(135,100%,50%,0.5);
+    position: fixed;
+    height: 40px;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+}
+
+div.lateral {
+    background: hsla(280,100%,50%,0.7);
+    height: 2000px;
+    width: 100px;
+    bottom: 0px;
+    right: 0px;
+    top: 0px;
+}
+
+div.popup {
+    background: hsla(300,100%,70%,0.5);
+    border-radius: 10px;
+    position: fixed;
+    height: 200px;
+    width: 400px;
+    margin: auto;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+}
+
+div.popup div:first-of-type {
+    background: hsl(0,100%,30%);
+    color: hsl(0,100%,100%);
+    text-align: center;
+    border-radius: 5px;
+    position: absolute;
+    margin: auto;
+    width: 20px;
+    right: 0px;
+    right: 5px;
+    top: 5px;
+}
+
+div.popup div:first-of-type::before{
+    content: "X";
+}

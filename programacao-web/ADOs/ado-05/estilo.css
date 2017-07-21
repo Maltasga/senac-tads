@@ -1,0 +1,59 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+body {
+    background-image: url('imagens/papelparede.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: hsla(300, 90%, 70%, .3);
+}
+h1:nth-of-type(1) {    
+    display: inline-block;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    width: 600px;
+    text-align: center;
+    font-size: 3.8em;
+    font-family: 'Architects Daughter', cursive;
+}
+form {
+    top: 20%;
+    left: 100px;
+    right: 0px;
+    width: 50%;
+    margin: auto;
+    position: absolute;
+}
+
+div.linha {    
+    display: inline-block;
+    margin: 10px auto;
+    width: 100%
+}
+
+div.linha > div.campo {
+    display: inline-block;
+}
+
+div.campo > label {
+    display: block;
+    font-weight: 600;
+}
+
+.label-radio {
+    display: inline-block !important;
+}
+
+input.premio {
+    width: 200px;
+}
+
+input, select, textarea {
+    padding: 5px;
+    border-color: hsla(300, 90%, 30%, .3)
+}

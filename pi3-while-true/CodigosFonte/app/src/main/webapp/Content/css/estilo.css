@@ -1,0 +1,138 @@
+body{
+    background-image: url("../img/fundo(2).jpg") ;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: #f1eee7;
+}
+.form-cadastro{
+    width: 870px;
+    border: 1px #777 solid;
+    background: #F8F8FF;
+    box-sizing: border-box;
+    padding-left: 35px;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    position: absolute;
+    left: 95px;
+    top: 85px;
+    border-radius: 30px;
+    opacity: 0.9;
+}
+.form-cadastro:hover{
+    opacity: 1;
+}
+.form-dados{
+    padding-top: 20px;
+}
+.form-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-valor{
+    display: flex;
+    align-items: center;
+}
+.form-combos{
+    display: flex;
+    align-items: center;
+}
+.form-botoes{
+    padding-left: 15px; 
+    display: flex;
+    justify-content: flex-end;
+}
+.btn{
+    margin: 3px;
+}
+.form-group{
+    box-sizing: border-box;
+    margin: 10px;   
+}
+
+.titulo {
+    padding-bottom: 9px;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 36pt;
+}
+.menu-itens>li>a {
+    color: black;
+    font-weight: bold;
+}
+.menu{
+    /*    display: flex;*/
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    width: 100%;
+    background: #f4f4fa;
+    box-shadow: 8px 15px 35px #888888;
+    /*    align-items: center;*/
+    /*    justify-content: space-between;*/
+}
+.menu-usuario{
+    right: 10px;
+    top: 11px;
+}
+.logo{
+    width: 200px;
+}
+.form-borda{
+    border: 1px solid #888888;
+    border-radius:20px 20px 20px 20px;
+}
+
+.btns{
+    height: 30px;
+    align-self: center;
+    margin-top: 26px;
+    padding-bottom: 25px;
+}
+/*Tamanho de campos*/
+
+.form-cliente, .form-produto, .form-colecao{
+    width: 70%;
+}
+.form-razaoSocial{
+    width:65%
+}
+.form-endereco{
+    width: 56%;
+}
+.form-cnpj{
+    width: 20%;
+}
+.form-cpf, .form-nascimento, .form-sexo, .form-complemento {
+    width: 17%;
+}
+.form-periodo, .form-ano, .form-codigo, .form-valor-item, .form-tipo, .form-comboColecao{
+    width: 20%;
+}
+.form-email{
+    width: 35%;
+}
+.form-login{
+    width: 46%;   
+}
+.form-senha{
+    width: 27%;
+}
+.form-nome{
+    width: 70%;
+}
+.form-cor{
+    width: 17%;
+}
+.form-descricao{
+    width: 93%;
+}
+.form-tamanho, .form-quantidade{
+    width: 10%
+}
+.form-cep{
+    width: 12%;   
+}
+.form-logradouro{
+    width: 60%;
+}
+.hide{
+    display: none;
+}

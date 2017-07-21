@@ -1,0 +1,58 @@
+* {
+    margin: 0px;
+}
+
+body {
+    background-color: hsl(0,0%,50%);
+    font-family: Helvetica, sans-serif, Verdana;
+}
+.container {
+    margin: 100px 12%;
+    float: left;
+}
+.titulo {
+    color: hsl(0, 25%, 90%);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+div:first-of-type.titulo {
+    background-color: hsl(169, 56%, 22%);
+    width: 100%;
+    height:40px;
+    padding: 30px;
+    position: fixed;
+}
+
+.categoria {
+    height: 20px;
+    width: 50px;
+    float: left;
+    margin: auto 30px;
+    text-align: center;
+}
+.cat {
+    margin-left: -15px;
+    height: inherit;
+    width: 10px;
+    float: left;
+}
+
+.cat-animacao {
+    background-color: #ff751a;
+}
+.cat-aventura {
+    background-color: #ff0000;
+}
+.cat-syfy {
+    background-color: #ff6666;
+}
+.cat-suspense {
+    background-color: #d966ff;
+}
+.cat-comedia {
+    background-color: #ffff00;
+}
+.cat-romance {
+    background-color: #0066cc;
+}

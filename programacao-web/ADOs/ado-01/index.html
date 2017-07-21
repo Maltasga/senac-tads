@@ -1,0 +1,32 @@
+<!--Gabriel Malta - TADS B-->
+<!DOCTYPE html>
+<html lang="pr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ADO 01</title>
+    <style>
+    .container {
+        margin: 25% auto;
+        text-align: center;
+    }
+    .container h1:first-of-type {
+        font-size: 3em;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Meu Título que muda de cor</h1>
+    </div>
+    <script>
+        window.addEventListener("mousemove", function (event) {
+            var hue = ~~(event.x / window.innerWidth * 360);
+            var titulo = document.querySelector("h1:first-of-type");
+            titulo.style.color = "hsl(" + hue + ", 100%, 50%)";
+        });    
+    </script>
+</body>
+
+</html>
