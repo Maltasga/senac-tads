@@ -4,11 +4,22 @@
 body{
     background: linear-gradient(to top, #000 , #fff);
 }
-#titulo {
-    text-align: center;
-    font-family: verdana;
-    margin: 20px auto;
+#titulo{
+    padding: 10px;
 }
+#titulo img {    
+    left: 0;
+    right: 0;
+    position: relative;
+    margin: auto;        
+}
+#titulo img#logo-lg {
+    display: block;
+}
+#titulo img#logo-sm {
+    display: none;
+}
+
 #menu {
     padding: 10px;
     margin: auto;
@@ -41,7 +52,6 @@ body{
 }
 .produto>center{
     padding: 20px;
-    min-height: 445px;
 }
 .produto>.nome{
     color:#6b6868;
@@ -62,6 +72,12 @@ body{
 }
 
 @media screen and (max-width: 700px){
+    #titulo img#logo-lg {
+        display: none;
+    }
+    #titulo img#logo-sm {
+        display: block;
+    }
     #menu {
         display: none;
     }
