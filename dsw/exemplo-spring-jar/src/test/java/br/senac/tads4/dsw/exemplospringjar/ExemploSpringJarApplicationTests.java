@@ -1,4 +1,4 @@
-package br.senac.tads4.dsw.exemplospring;
+package br.senac.tads4.dsw.exemplospringjar;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ExemploSpringApplicationTests {
+public class ExemploSpringJarApplicationTests {
 
 	@Test
 	public void contextLoads() {
