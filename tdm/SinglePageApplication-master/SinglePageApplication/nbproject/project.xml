@@ -785,6 +785,15 @@
                 <file localPath="public_html/js/libs/angular.js/i18n/angular-locale_zu-za.js" path="i18n/angular-locale_zu-za.js"/>
                 <file localPath="public_html/js/libs/angular.js/i18n/angular-locale_zu.js" path="i18n/angular-locale_zu.js"/>
             </library>
+            <library name="jquery" version="3.2.1">
+                <file localPath="public_html/js/libs/jquery/core.js" path="core.js"/>
+                <file localPath="public_html/js/libs/jquery/jquery.js" path="jquery.js"/>
+                <file localPath="public_html/js/libs/jquery/jquery.min.js" path="jquery.min.js"/>
+                <file localPath="public_html/js/libs/jquery/jquery.min.map" path="jquery.min.map"/>
+                <file localPath="public_html/js/libs/jquery/jquery.slim.js" path="jquery.slim.js"/>
+                <file localPath="public_html/js/libs/jquery/jquery.slim.min.js" path="jquery.slim.min.js"/>
+                <file localPath="public_html/js/libs/jquery/jquery.slim.min.map" path="jquery.slim.min.map"/>
+            </library>
             <library name="twitter-bootstrap" version="3.3.7">
                 <file localPath="public_html/js/libs/twitter-bootstrap/css/bootstrap-theme.css" path="css/bootstrap-theme.css"/>
                 <file localPath="public_html/js/libs/twitter-bootstrap/css/bootstrap-theme.css.map" path="css/bootstrap-theme.css.map"/>
