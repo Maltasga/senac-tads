@@ -28,117 +28,117 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
+import javax.persistence.*;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.Size;
 
 /**
  *
- * @author fernando.tsuda
+ * @author gabriel.malta
  */
+@Entity
+@Table(name = "TB_PRODUTO")
 public class Produto implements Serializable {
 
-  private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID_PRODUTO")
+    private Long id;
+    
+    @Size(min = 1, max = 50, message = "{produto.nome.erro}")
+    private String nome;
+    
+    @Size(min = 1, max = 200, message = "{produto.descricao.erro}")
+    private String descricao;
 
-  //@NotNull 
-  @Size(min = 1, max = 50, 
-          message = "{produto.nome.erro}")
-  private String nome;
+    @Digits(integer = 6, fraction = 2, message = "{produto.preco.erro}")
+    private BigDecimal preco;
 
-  //@NotNull
-  @Size(min = 1, max = 200,
-          message = "{produto.descricao.erro}")
-  private String descricao;
+    private Date dtCadastro;
 
-  @Digits(integer = 6, fraction = 2,
-          message = "{produto.preco.erro}")
-  private BigDecimal preco;
+    private List<Categoria> categorias;
 
-  private Date dtCadastro;
+    private List<ImagemProduto> imagens;
 
-  private List<Categoria> categorias;
+    private String observacoes;
+    
+    public Produto() {
 
-  private List<ImagemProduto> imagens;
-  
-  private String observacoes;
+    }
 
-  //private List<ItemCompra> itensCompra;
-  public Produto() {
+    public Produto(Long id, String nome, String descricao, BigDecimal preco, Date dtCadastro) {
+        this.id = id;
+        this.nome = nome;
+        this.descricao = descricao;
+        this.preco = preco;
+        this.dtCadastro = dtCadastro;
+    }
 
-  }
+    public Produto(Long id, String nome, String descricao, BigDecimal preco, Date dtCadastro, List<ImagemProduto> imagens, List<Categoria> categorias) {
+        this.id = id;
+        this.nome = nome;
+        this.descricao = descricao;
+        this.preco = preco;
+        this.dtCadastro = dtCadastro;
+        this.imagens = imagens;
+        this.categorias = categorias;
+    }
 
-  public Produto(Long id, String nome, String descricao, BigDecimal preco, Date dtCadastro) {
-    this.id = id;
-    this.nome = nome;
-    this.descricao = descricao;
-    this.preco = preco;
-    this.dtCadastro = dtCadastro;
-  }
+    public Long getId() {
+        return id;
+    }
 
-  public Produto(Long id, String nome, String descricao, BigDecimal preco, Date dtCadastro, List<ImagemProduto> imagens, List<Categoria> categorias) {
-    this.id = id;
-    this.nome = nome;
-    this.descricao = descricao;
-    this.preco = preco;
-    this.dtCadastro = dtCadastro;
-    this.imagens = imagens;
-    this.categorias = categorias;
-  }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-  public Long getId() {
-    return id;
-  }
+    public String getNome() {
+        return nome;
+    }
 
-  public void setId(Long id) {
-    this.id = id;
-  }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
-  public String getNome() {
-    return nome;
-  }
+    public String getDescricao() {
+        return descricao;
+    }
 
-  public void setNome(String nome) {
-    this.nome = nome;
-  }
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
 
-  public String getDescricao() {
-    return descricao;
-  }
+    public BigDecimal getPreco() {
+        return preco;
+    }
 
-  public void setDescricao(String descricao) {
-    this.descricao = descricao;
-  }
+    public void setPreco(BigDecimal preco) {
+        this.preco = preco;
+    }
 
-  public BigDecimal getPreco() {
-    return preco;
-  }
+    public Date getDtCadastro() {
+        return dtCadastro;
+    }
 
-  public void setPreco(BigDecimal preco) {
-    this.preco = preco;
-  }
+    public void setDtCadastro(Date dtCadastro) {
+        this.dtCadastro = dtCadastro;
+    }
 
-  public Date getDtCadastro() {
-    return dtCadastro;
-  }
+    public List<Categoria> getCategorias() {
+        return categorias;
+    }
 
-  public void setDtCadastro(Date dtCadastro) {
-    this.dtCadastro = dtCadastro;
-  }
+    public void setCategorias(List<Categoria> categorias) {
+        this.categorias = categorias;
+    }
 
-  public List<Categoria> getCategorias() {
-    return categorias;
-  }
+    public List<ImagemProduto> getImagens() {
+        return imagens;
+    }
 
-  public void setCategorias(List<Categoria> categorias) {
-    this.categorias = categorias;
-  }
-
-  public List<ImagemProduto> getImagens() {
-    return imagens;
-  }
-
-  public void setImagens(List<ImagemProduto> imagens) {
-    this.imagens = imagens;
-  }
+    public void setImagens(List<ImagemProduto> imagens) {
+        this.imagens = imagens;
+    }
 //
 //  public List<ItemCompra> getItensCompra() {
 //    return itensCompra;
@@ -148,31 +148,31 @@ public class Produto implements Serializable {
 //    this.itensCompra = itensCompra;
 //  }
 
-  @Override
-  public String toString() {
-    return "Produto{" + "id=" + id + ", nome=" + nome + ", descricao=" + descricao + ", preco=" + preco + ", dtCadastro=" + dtCadastro + ", categorias=" + categorias + ", imagens=" + imagens + '}';
-  }
+    @Override
+    public String toString() {
+        return "Produto{" + "id=" + id + ", nome=" + nome + ", descricao=" + descricao + ", preco=" + preco + ", dtCadastro=" + dtCadastro + ", categorias=" + categorias + ", imagens=" + imagens + '}';
+    }
 
-  @Override
-  public int hashCode() {
-    int hash = 7;
-    hash = 89 * hash + Objects.hashCode(this.id);
-    return hash;
-  }
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 89 * hash + Objects.hashCode(this.id);
+        return hash;
+    }
 
-  @Override
-  public boolean equals(Object obj) {
-    if (obj == null) {
-      return false;
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Produto other = (Produto) obj;
+        if (!Objects.equals(this.id, other.id)) {
+            return false;
+        }
+        return true;
     }
-    if (getClass() != obj.getClass()) {
-      return false;
-    }
-    final Produto other = (Produto) obj;
-    if (!Objects.equals(this.id, other.id)) {
-      return false;
-    }
-    return true;
-  }
 
 }
