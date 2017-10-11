@@ -28,6 +28,8 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Size;
 
 /**
  *
@@ -37,10 +39,18 @@ public class Produto implements Serializable {
 
   private Long id;
 
+  //@NotNull 
+  @Size(min = 1, max = 50, 
+          message = "{produto.nome.erro}")
   private String nome;
 
+  //@NotNull
+  @Size(min = 1, max = 200,
+          message = "{produto.descricao.erro}")
   private String descricao;
 
+  @Digits(integer = 6, fraction = 2,
+          message = "{produto.preco.erro}")
   private BigDecimal preco;
 
   private Date dtCadastro;
