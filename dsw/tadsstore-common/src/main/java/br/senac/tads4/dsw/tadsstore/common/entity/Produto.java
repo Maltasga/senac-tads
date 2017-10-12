@@ -1,26 +1,3 @@
-/*
- * The MIT License
- *
- * Copyright 2016 fernando.tsuda.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */
 package br.senac.tads4.dsw.tadsstore.common.entity;
 
 import java.io.Serializable;
@@ -44,24 +21,37 @@ public class Produto implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_PRODUTO")
     private Long id;
-    
-    @Size(min = 1, max = 50, message = "{produto.nome.erro}")
+
+    @Column(name = "NM_PRODUTO", length = 100, nullable = false)
+    @Size(min = 1, max = 100, message = "{produto.nome.erro}")
     private String nome;
-    
-    @Size(min = 1, max = 200, message = "{produto.descricao.erro}")
+
+    @Column(name = "DS_PRODUTO", length = 1000, nullable = false)
+    @Size(min = 1, max = 1000, message = "{produto.descricao.erro}")
     private String descricao;
 
+    @Column(name = "VL_PRODUTO", nullable = false, precision = 6, scale = 2)
     @Digits(integer = 6, fraction = 2, message = "{produto.preco.erro}")
     private BigDecimal preco;
 
+    @Column(name = "DT_CADASTRO", nullable = false)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date dtCadastro;
 
+    @ManyToMany
+    @JoinTable(name = "TB_PRODUTO_CATEGORIA",
+            joinColumns = {
+                @JoinColumn(name = "ID_PRODUTO")},
+            inverseJoinColumns = {
+                @JoinColumn(name = "ID_CATEGORIA")})
     private List<Categoria> categorias;
 
+    @OneToMany(mappedBy = "produto", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
     private List<ImagemProduto> imagens;
 
+    @Transient
     private String observacoes;
-    
+
     public Produto() {
 
     }
