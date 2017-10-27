@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    clear: both;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+[class^="col-"] {
+    float: left;
+}
+
+.titulo {
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    [class^="col-"] {
+        width: 100%;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:991px) {
+    [class^="col-"] {
+        width: 50%;
+        margin: 10px auto;
+    }
+    .last-menu {
+        width: 100%;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+.menu {
+    margin: auto 20px;
+    background-color: grey;
+    border: 3px solid #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+[class^="menu-titulo"] {
+    top: 0;
+    right: 0;
+    position: relative;
+    margin: auto;
+    border-left: 3px solid #000;
+    border-bottom: 3px solid #000;
+    float: right;
+    width: 100px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.menu-titulo-chicken {
+    background-color: palevioletred;
+}
+
+.menu-titulo-beef {
+    background-color: red;
+    color: #fff;
+}
+
+.menu-titulo-sushi {
+    background-color: darkkhaki;
+}
+
+.menu-content {
+    padding: 15px;
+}
+
+.menu-content::after {
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus sapien at ultricies gravida. Maecenas pulvinar dolor    eu consectetur fermentum. Curabitur finibus neque massa. Morbi sodales venenatis dui eu tincidunt. Sed sagittis,    libero nec fermentum pharetra, eros quam vehicula orci, a bibendum turpis tortor in ante. Quisque eget feugiat   mauris, vel convallis urna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus    mus. In hac habitasse platea dictumst. Mauris porttitor vitae diam et blandit."
+}
