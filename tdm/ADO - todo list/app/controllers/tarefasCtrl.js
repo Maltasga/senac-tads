@@ -1,31 +1,10 @@
-app.controller("tarefasCtrl", function ($scope, $location, $routeParams) {
+app.controller("tarefasCtrl", function ($scope, $routeParams) {
     function Model(i, p, t, f) {
         this.id = i;
         this.prazo = p;
         this.tarefa = t;
         this.feito = f;
-
-        this.getDataStr = function () {
-            var dia = "",
-                mes = "",
-                ano = 0;
-            dia = (function (d) {
-                if (d < 9) return "0" + d;
-                return "" + d;
-            })(this.prazo.getDate());
-            mes = (function (m) {
-                m += 1;
-                if (m < 9) return "0" + m;
-                return "" + m;
-            })(this.prazo.getMonth());
-            ano = this.prazo.getFullYear();
-            return dia + "/" + mes + "/" + ano;
-        }
     };
-
-    function stringToDate(str) {
-        return new Date(str.split("/").reverse())
-    }
 
     function atualizaModelTarefas() {
         $scope.tarefas = todo_storage.getAll();
@@ -37,31 +16,26 @@ app.controller("tarefasCtrl", function ($scope, $location, $routeParams) {
     $scope.tarefaModel = new Model();
 
     $scope.onclickFeito = function (event, task) {
-        todo_storage.editar({
-            id: task.id,
-            prazo: task.prazo,
-            tarefa: task.tarefa,
-            feito: event.currentTarget.checked
-        });
+        task.feito = event.currentTarget.checked
+        todo_storage.editar(task);
         atualizaModelTarefas();
     }
 
     $scope.onclickNovaTarefa = function (event) {
-        var _model = new Model(Math.floor(Math.random() * 1000), $scope.tarefaModel.getDataStr(), $scope.tarefaModel.tarefa, false);
+        var _model = new Model(Math.floor(Math.random() * 1000), getDataStr($scope.tarefaModel.prazo), $scope.tarefaModel.tarefa, false);
         todo_storage.salvar(_model);
         $scope.tarefaModel = new Model();
         atualizaModelTarefas();
     }
 
     $scope.onclickEditar = function (event) {
-        var _model = new Model($scope.produtoEdicao.id, $scope.produtoEdicao.prazo, $scope.produtoEdicao.tarefa, $scope.produtoEdicao.feito);
-        $scope.produtoEdicao = null;
         todo_storage.editar({
-            id: _model.id,
-            prazo: _model.getDataStr(),
-            tarefa: _model.tarefa,
-            feito: _model.feito
+            id: $scope.produtoEdicao.id,
+            prazo: getDataStr($scope.produtoEdicao.prazo),
+            tarefa: $scope.produtoEdicao.tarefa,
+            feito: $scope.produtoEdicao.feito
         });
+        $scope.produtoEdicao = null;
         atualizaModelTarefas();
         window.location = "#!/tarefas";
     }
