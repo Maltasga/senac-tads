@@ -1,0 +1,22 @@
+<div class="col-xs-12 text-center alert alert-warning" ng-show="produtoEdicao == null">
+    <h3>Algo deu errado. Não encontramos a tarefa</h3>
+</div>
+<div class="col-xs-12" ng-hide="produtoEdicao == null">
+    <form class="form-group">
+            <input type="hidden" ng-model="produtoEdicao.id" />
+            <input type="hidden" ng-model="produtoEdicao.feito" />
+        <div class="form-group">
+            <label>Prazo</label>
+            <input type="date" ng-model="produtoEdicao.prazo" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Tarefa</label>
+            <br>
+            <textarea class="form-control" ng-model="produtoEdicao.tarefa" cols="90" rows="4"></textarea>
+        </div>
+        <div class="row">
+            <input type="button" class="btn btn-success" value="Gravar" ng-click="onclickEditar($event)" />
+            <a href="#!/tarefas" class="btn btn-info">Voltar</a>
+        </div>
+    </form>
+</div>
