@@ -3,8 +3,11 @@
 </div>
 <div class="col-xs-12" ng-hide="produtoEdicao == null">
     <form class="form-group">
-            <input type="hidden" ng-model="produtoEdicao.id" />
-            <input type="hidden" ng-model="produtoEdicao.feito" />
+        <input type="hidden" ng-model="produtoEdicao.id" />
+        <div class="form-group">
+            <input type="checkbox" ng-model="produtoEdicao.feito" class="form-horizontal" />
+            <label>Feito</label>
+        </div>
         <div class="form-group">
             <label>Prazo</label>
             <input type="date" ng-model="produtoEdicao.prazo" class="form-control" />

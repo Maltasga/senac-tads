@@ -2,7 +2,11 @@ window.todo_storage = (function () {
     "use strict";
 
     var NOME_STORAGE_ITEM = "tarefas";
-    sessionStorage.setItem(NOME_STORAGE_ITEM, "[]");
+
+    function init() {
+        if (getAll() == null)
+            sessionStorage.setItem(NOME_STORAGE_ITEM, "[]");
+    }
 
     function insertStorage(arrTarefas) {
         if (!Array.isArray(arrTarefas))
@@ -55,6 +59,8 @@ window.todo_storage = (function () {
         }
         return intNovoId;
     }
+
+    init()
 
     return {
         salvar: function (item) {
